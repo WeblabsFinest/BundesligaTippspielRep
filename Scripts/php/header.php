@@ -1,7 +1,7 @@
 <?php
 	require_once 'constant.php';
 ?>
-<link rel="stylesheet" type="text/css" href="/BundesligaTippspiel/Styles/site.css">
+<link rel="stylesheet" type="text/css" href="/BuLiTippspiel/Styles/site.css">
 
 <!-- jQuery -->
 <script src=<?php echo HOME_HTML."Ressource/jQuery/jquery-1.10.1.min.js";?> type="text/javascript"></script>

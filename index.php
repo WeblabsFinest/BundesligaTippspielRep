@@ -6,6 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Weblab Bundesliga Tippspiel</title>
         <?php include "Scripts/php/header.php" ?>
+        <?php require_once "Scripts/php/constant.php" ?>
     </head>
     <body>
         <div id="page">
@@ -14,7 +15,7 @@
                 <?php include "Views/Partial/_login.php" ?>
             </div>
             <div id="content">
-                <a href="/BundesligaTippspiel/Views/Page/register.php"><img src="Media/Images/RegistrierenBanner.jpg" /></a>
+                <a href="<?php echo HOME_HTML.'Views/Page/register.php'?>"><img src="Media/Images/RegistrierenBanner.jpg" /></a>
             </div>
             <div id="sidebarRight">
                 

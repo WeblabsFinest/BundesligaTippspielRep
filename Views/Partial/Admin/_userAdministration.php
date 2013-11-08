@@ -20,7 +20,7 @@
 	<script>
 	$( document ).ready(function() {
 		$("#userGrid").jqGrid({
-			url: "http://localhost/BundesligaTippspiel/Controllers/UserController.php?getUsersJson",
+			url: "http://localhost/BuLiTippspiel/Controllers/UserController.php?getUsersJson",
 			datatype: "json",
 			mType: "GET",
 			width: 900,

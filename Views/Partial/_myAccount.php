@@ -25,7 +25,7 @@
 ?>
 <div id="myAccount">
     <h2>&Uuml;ber mich <?php if($profile->username == $_SESSION['user']['username']){?>
-        <button type="button" onclick="edit()" ><img src="/BundesligaTippspiel/Media/Images/Icons/shape_square_edit.png" /> bearbeiten</button>
+        <button type="button" onclick="edit()" ><img src="/BuLiTippspiel/Media/Images/Icons/shape_square_edit.png" /> bearbeiten</button>
         <?php } ?></h2>
     Name: <?php echo $profile->surname." "; echo $profile->name; ?><br/>
     Wohnort: <?php echo $profile->home; ?><br/>

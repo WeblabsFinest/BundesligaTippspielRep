@@ -8,5 +8,5 @@
 	
 	$host = htmlspecialchars($_SERVER["HTTP_HOST"]);
     $home = "index.php";
-    header("Location: http://$host/BundesligaTippspiel/$home");
+    header("Location: http://$host/BuLiTippspiel/$home");
 ?>

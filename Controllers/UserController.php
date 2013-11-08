@@ -1,5 +1,5 @@
 <?php
-	require_once $_SERVER['DOCUMENT_ROOT'].'/BundesligaTippspiel/Scripts/php/constant.php';
+	require_once $_SERVER['DOCUMENT_ROOT'].'/BuLiTippspiel/Scripts/php/constant.php';
     require_once HOME_PHP."DB/UserDBManager.php";
     require_once HOME_PHP."Models/User.php";
     require_once HOME_PHP."Models/Profile.php";
@@ -46,9 +46,9 @@
                 $home = "Views/Page/start.php";
 				$homeAdmin = "Views/Page/Admin/userManagement.php";
 				if($user->role != "Admin"){
-                header("Location: http://$host/BundesligaTippspiel/$home");
+                header("Location: http://$host/BuLiTippspiel/$home");
 				}else{
-					header("Location: http://$host/BundesligaTippspiel/$homeAdmin");
+					header("Location: http://$host/BuLiTippspiel/$homeAdmin");
 				}
             }else{
                 return $status;
