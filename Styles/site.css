@@ -1,0 +1,301 @@
+/* Hauptstruktur*/
+body {
+    font-family: Estrangelo Edessa;
+    font-size: 12pt;
+    color: #f4f3f3;
+    background-color: gray;
+    background-image:url(../Media/Images/Hintergrund.jpg);
+    background-size: cover;
+}
+
+#page{
+    width: 1200px;
+}
+
+#sidebarLeft{
+    clear: left;
+    float: left;
+    width: 250px;
+    height: 700px;
+    padding: 10px;
+}
+
+#content{
+    float: left;
+    width: 700px;
+    height: 700px;
+    padding: 10px;
+}
+
+#contentAdmin{
+	float: left;
+    width: 910px;
+    height: 700px;
+    padding: 10px;
+}
+
+
+#sidebarRight{
+    float: right;
+    width: 250px;
+    height: 700px;
+    padding: 10px;
+}
+
+/* Partielle Views 
+   Login            */
+#login{
+    
+}
+
+#login input{
+    width: 244px;
+    margin-top: 5px;
+}
+
+#login a{
+    margin-left: 5px;
+    color: #fec911;
+}
+
+#login a:hover{
+    color: #f4f3f3;
+}
+
+/* myAccount */
+#myAccount{
+    margin-top: 20px;
+}
+
+#myAccountEdit{
+    margin-top: 20px;
+    display: none;
+}
+
+#myAccountEdit input{
+    width: 75px;
+}
+
+#myAccountEdit textarea{
+    width: 100%;
+    height: 120px;
+}
+
+#accountManagement{
+    margin-top: 20px;
+}
+
+#accountManagement button{
+    width: 100%;
+}
+/*Eingabeelemente*/
+.textBox{
+    
+}
+
+/* HTML Elemente */
+a{
+    text-decoration: none;
+    color: #f4f3f3;
+}
+
+h2{
+    background-color: #202020;
+    padding: 7px;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 18pt;
+    margin-top: 0;
+}
+
+/* Navigation */
+#navigation{
+    font-size: 14pt;
+}
+
+#navigation ul{
+    list-style: none;
+}
+
+#navigation ul li{
+    padding: 5px;
+    margin: 10px;
+    display: inline;
+}
+
+#navigation ul li:hover{
+    background-color: #fec911;
+    color: #000;
+}
+
+/* Registrieren */
+#profileImage{
+    width: 700px;
+    height: 250px;
+    padding-top: 10px;
+    background-image: url(../Media/Images/ImageContainer.png);
+}
+
+#register2, #register3, #register4{
+    display: none;
+}
+
+#process{
+    
+}
+
+#processLabel{
+    float: left;
+    font-size: 13pt;
+    width: 124px;
+}
+
+#process1, #process2, #process3, #process4{
+    float: left;
+    margin-left: 20px;
+    width: 124px;
+    height: 20px;
+    background-color: #202020;
+}
+
+#processActive{
+    float: left;
+    margin-left: 20px;
+    width: 124px;
+    height: 20px;
+    background-color: #fec911;
+}
+
+#register input{
+    width: 350px;
+}
+
+#register td{
+    width: 350px;
+}
+
+#register .whitespaceTableRow{
+    height: 20px;
+}
+
+#register select{
+    width: 350px;
+}
+
+.buttonRight{
+    margin-top: 20px;
+    float: right;
+}
+
+/*FAQ******************                LUKAS der alte Homoproll    */
+
+
+.question{
+    display: none; 
+    width: 700px;"
+}
+
+.grayBackground{
+    background-color: #202020;
+}
+
+/* Allgemeine Styles */
+
+select{
+    width: 150px;
+}
+
+.left{
+    float: left;
+}
+
+.contentWidth{
+    width: 700px;
+    clear: both;
+    margin-left: 10px;
+    margin-top: 200px;
+}
+
+.errorBox{
+    color: red;
+}
+
+/****************************** Administrator ********************/
+
+/*Admin User Verwaltung */
+#userAdministration{
+	width: 900px;
+}
+
+
+#userAdministration th{
+	background-color: black;
+	color: white;	
+}
+/*
+ * Filter Toolbar
+ */
+#userAdministration tr:nth-child(odd):first-child{
+	background-color: black;
+}
+
+#userAdministration tr:nth-child(odd):first-child:hover{
+	background-color: black;
+}
+
+#userAdministration tr:nth-child(odd):last-child{
+	background-color: black;
+	color: #fec911;
+}
+
+#userAdministration tr:nth-child(odd):last-child:hover{
+	background-color: black;
+	color: #fec911;
+}
+
+#userAdministration tr:nth-child(odd){
+	background-color: #fec911;
+	color: #202020;
+	height: 50px;
+}
+
+#userAdministration tr:nth-child(odd):hover{
+	background-color: #FEA911;
+}
+
+#userAdministration tr:nth-child(even){
+	background-color: #202020;
+	height: 50px;
+}
+
+#userAdministration tr:nth-child(even):hover{
+	background-color: #101010;
+}
+
+#userAdministration td, th .smallTableCell{
+	width: 30px;
+}
+
+#userAdministration td, th .normalTableCell{
+	width: 100px;
+}
+#pagerUser{
+	height: 100%;
+	font-size: 12pt;
+	color: #fec911;
+}
+
+.adminIconButton{
+	background-color: black;
+	margin: 1px;
+	border: none;
+	float: left;
+	width: 50px;
+	height: 50px;
+	cursor: hand;
+} 
+
+.adminIconButton:hover{
+	background-color: white;
+	cursor: hand;
+} 
