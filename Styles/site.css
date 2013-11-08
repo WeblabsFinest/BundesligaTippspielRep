@@ -88,6 +88,8 @@ body {
 #accountManagement button{
     width: 100%;
 }
+
+
 /*Eingabeelemente*/
 .textBox{
     
@@ -99,6 +101,10 @@ a{
     color: #f4f3f3;
 }
 
+ul{
+    list-style: none;
+}
+
 h2{
     background-color: #202020;
     padding: 7px;
@@ -108,6 +114,38 @@ h2{
     margin-top: 0;
 }
 
+.dialog{
+    display: none;
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    background-color: #202020;
+    border: 3px solid white;
+}
+
+.dialog input{
+    width: 400px;
+}
+
+.dialog button{
+    width: 400px;
+}
+
+.dialog li{
+    margin: 20px;
+}
+
+.dialog .modalCloseImg {
+    background:url(../Ressource/SimpleModal/x.png) no-repeat;
+    width:25px;
+    height:29px;
+    display:inline;
+    z-index:3200;
+    position:absolute;
+    top:-15px;
+    right:-18px;
+    cursor:pointer;
+}
 /* Navigation */
 #navigation{
     font-size: 14pt;
