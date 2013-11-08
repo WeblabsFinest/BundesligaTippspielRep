@@ -161,19 +161,19 @@
 				$controll = "";
 				$lock = "<form action='".HOME_HTML."Views/Page/Admin/userManagement.php' method='post'>".
 							"<input type='hidden' name='email' value='".$user->email."' />".
-							'<button type="submit" title="Benutzer Sperren" class="adminIconButton criticalButton" name="lock"><img src="/BundesligaTippspiel/Media/Images/icons/cross.png" alt="Sperren"/></button>'.
+							'<button type="submit" title="Benutzer Sperren" class="adminIconButton criticalButton" name="lock"><img src="'.HOME_HTML.'Media/Images/icons/cross.png" alt="Sperren"/></button>'.
 						'</form>';
 				$activate = "<form action='".HOME_HTML."Views/Page/Admin/userManagement.php' method='post'>".
 							"<input type='hidden' name='email' value='".$user->email."' />".
-							'<button type="submit" title="Benutzer Freischalten" class="adminIconButton criticalButton" name="activate"><img src="/BundesligaTippspiel/Media/Images/icons/accept.png" alt="Freischalten"/></button>'.
+							'<button type="submit" title="Benutzer Freischalten" class="adminIconButton criticalButton" name="activate"><img src="'.HOME_HTML.'Media/Images/icons/accept.png" alt="Freischalten"/></button>'.
 						'</form>';
 				$pwdReset = "<form action='".HOME_HTML."Views/Page/Admin/userManagement.php' method='post'>".
 							"<input type='hidden' name='email' value='".$user->email."' />".
-						'<button type="submit" title="Passwort zurücksetzen" class="adminIconButton criticalButton" name="passwordReset"><img src="/BundesligaTippspiel/Media/Images/icons/key_add.png" alt="Passwort reset"/></button>'.
+						'<button type="submit" title="Passwort zurücksetzen" class="adminIconButton criticalButton" name="passwordReset"><img src="'.HOME_HTML.'Media/Images/icons/key_add.png" alt="Passwort reset"/></button>'.
 					'</form>';
 				$delete = "<form action='".HOME_HTML."Views/Page/Admin/userManagement.php' method='post'>".
 							"<input type='hidden' name='email' value='".$user->email."' />".
-						'<button type="submit" title="Benutzer Löschen" class="adminIconButton criticalButton" name="delete"><img src="/BundesligaTippspiel/Media/Images/icons/delete.png" alt="Löschen"/></button>'.
+						'<button type="submit" title="Benutzer Löschen" class="adminIconButton criticalButton" name="delete"><img src="'.HOME_HTML.'Media/Images/icons/delete.png" alt="Löschen"/></button>'.
 					'</form>';
 				if($user->role == "Admin"){
 					$controll = "";
@@ -225,7 +225,7 @@
         /**
          * löscht einen Benutzer aus der Datenbank und den dazugehörigen Relationen
          */
-        public static function deleteUser($email){
+        public static function deleteUser($email){	
             return UserDBManager::deleteUser($email);
         }
     }

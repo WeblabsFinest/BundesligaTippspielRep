@@ -18,6 +18,7 @@
         
     }elseif(isset($_POST['deleteAccount'])){
         UserController::deleteUser($_SESSION['user']['email']);
+		//ToDo Weiterleitung Startseite | Rückmeldung Modal
     }else{
         $profile = UserController::getProfile($_GET['user']);
     }
