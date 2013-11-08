@@ -8,8 +8,8 @@
         <?php include "../../Scripts/php/header.php" ?>
     </head>
     <body>
+    	<?php include "../Partial/_navigation.php" ?>
         <div id="page">
-            <?php include "../Partial/_navigation.php" ?>
             <div id="sidebarLeft">
                 <?php include "../Partial/_login.php" ?>
                 <?php include "../Partial/_myAccount.php" ?>
@@ -21,6 +21,10 @@
                 
             </div>
         </div>
+         <!-- Navigation Active Link Script -->
+        <script>
+    			var activeLink = "#navAccount";
+        </script>
     </body>
 </html>
 

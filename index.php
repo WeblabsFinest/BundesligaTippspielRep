@@ -9,8 +9,8 @@
         <?php require_once "Scripts/php/constant.php" ?>
     </head>
     <body>
+    	<?php include "Views/Partial/_navigation.php" ?>
         <div id="page">
-            <?php include "Views/Partial/_navigation.php" ?>
             <div id="sidebarLeft">
                 <?php include "Views/Partial/_login.php" ?>
             </div>
@@ -21,6 +21,10 @@
                 
             </div>
         </div>
+    <!-- Navigation Active Link Script -->
+    <script>
+    	var activeLink = "#navHome";
+    </script>
     </body>
 </html>
 

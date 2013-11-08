@@ -8,8 +8,8 @@
         <?php include "../../../Scripts/php/header.php" ?>
     </head>
     <body>
+    	<?php include HOME_PHP."Views/Partial/_navigation.php" ?>
         <div id="page">
-            <?php include HOME_PHP."Views/Partial/_navigation.php" ?>
             <div id="sidebarLeft">
                 <?php include HOME_PHP."Views/Partial/_login.php" ?>
             </div>

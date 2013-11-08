@@ -63,8 +63,8 @@
         </script>
     </head>
     <body>
+    	<?php include HOME_PHP."Views/Partial/_navigation.php" ?>
         <div id="page">
-            <?php include HOME_PHP."Views/Partial/_navigation.php" ?>
             <div id="sidebarLeft">
                 <?php include HOME_PHP."Views/Partial/_login.php" ?>
             </div>
@@ -215,6 +215,10 @@
             document.getElementById("register1").style.display = "none";
         </script>
         <?php }?>
+        <!-- Navigation Active Link Script -->
+        <script>
+    			var activeLink = "#navRegistrieren";
+        </script>
     </body>
 </html>
 

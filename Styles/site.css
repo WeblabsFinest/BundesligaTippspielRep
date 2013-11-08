@@ -1,3 +1,4 @@
+
 /* Hauptstruktur*/
 body {
     font-family: Estrangelo Edessa;
@@ -6,10 +7,12 @@ body {
     background-color: gray;
     background-image:url(../Media/Images/Hintergrund.jpg);
     background-size: cover;
+    margin: 0;
 }
 
 #page{
     width: 1200px;
+    margin-top: 50px;
 }
 
 #sidebarLeft{
@@ -109,23 +112,44 @@ h2{
 }
 
 /* Navigation */
+.navActiveLink{
+	background-color: #fec911;
+}
+
+.navActiveLink a{
+	color: #202020;
+}
+
 #navigation{
     font-size: 14pt;
+    background-color: #202020;
+    height: 85px;
+    width: 100%;
+    margin:0;
+    padding:0;
 }
 
 #navigation ul{
-    list-style: none;
+	margin:0;
+	padding-top: 40px;
 }
 
 #navigation ul li{
-    padding: 5px;
-    margin: 10px;
-    display: inline;
+	display: block;
+    list-style: none;
+    float: left;
+    width: 140px;
+    margin: 5px;
+    padding: 2px;
+    text-align: center;
 }
 
 #navigation ul li:hover{
     background-color: #fec911;
-    color: #000;
+}
+
+#navigation ul li:hover a{
+    color: #202020;
 }
 
 /* Registrieren */
