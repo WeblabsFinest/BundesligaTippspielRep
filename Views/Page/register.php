@@ -122,15 +122,8 @@
                             <div id="process4"></div>
                         </div><br/><br/>
                         <h3><img src="../../Media/Images/KopfIcon.png" height="25"/>  Mein Profil</h3>
-                        <div id="regProfileImage">
-                            <div class="clear">
-                                <div class="left"><img src="../../Media/Images/profilbild-platzhalter.jpg" hspace="10" /></div>
-                                <div>
-                                    Wähle ein Bild von deiner Festplatte aus und lege es als dein Profilbild fest.
-                                </div>
-                            </div>
-                            <div class="contentWidth"><input type="file" name="profilePicture"/></div>
-                        </div><br/>
+                        <?php include HOME_PHP."Views/Partial/_profileImage.php"?>
+                        <br/>
                         <table>
                             <tr>
                                 <td>Benutzername</td>
