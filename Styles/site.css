@@ -6,6 +6,8 @@ body {
     background-color: gray;
     background-image:url(../Media/Images/Hintergrund.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #page{
