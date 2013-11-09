@@ -121,6 +121,27 @@
 			}
 			return true;
 		 }
+         
+         /* Ändert das Passwort eines Nutzers zu dem übergebenen neuen Passwort
+          * return: 2 wenn alles funktioniert hat
+          * return: 1 wenn es ein problem in der methode gab
+          * return: 0 wenn das eingegebene alte passwort falsch ist */
+         public static function changePassword($email, $oldPassword, $newPassword){
+             $cryptedPassword =  crypt($oldPassword, "wiofnon23ijiosd.!kfjo3!ddsfkj");
+             $status = UserDBManager::checkPassword($email, $cryptedPassword);
+             if($status == 2){
+                 $cryptedPassword =  crypt($newPassword, "wiofnon23ijiosd.!kfjo3!ddsfkj");
+                 if(UserDBManager::updatePassword($email, $cryptedPassword)){
+                     return 2;
+                     
+                 }else{
+                     return 1;
+                    
+                 }
+             }else{
+                 return 0;
+             }
+         }
 		 
 		 public static function resetPassword($email){
 		 	  $password = "";
@@ -140,9 +161,9 @@
 			    $i++;
 			  }
 			  echo $password;
-			  $crypedPassword =  crypt($password, "wiofnon23ijiosd.!kfjo3!ddsfkj");
+			  $cryptedPassword =  crypt($password, "wiofnon23ijiosd.!kfjo3!ddsfkj");
 
-			  if(UserDBManager::updatePassword($email, $crypedPassword)){
+			  if(UserDBManager::updatePassword($email, $cryptedPassword)){
 			  	return true;
 			  }else{
 			  	return false;

@@ -11,3 +11,6 @@
 <script src=<?php echo HOME_HTML."Ressource/jqGrid/js/jquery.jqGrid.min.js";?> type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" media="screen" href=<?php echo HOME_HTML."Ressource/jqGrid/css/ui.jqgrid.css";?> />
 
+<!-- SimpleModal Includes -->
+<script src=<?php echo HOME_HTML."Ressource/SimpleModal/jquery.simplemodal-1.4.4.js";?> type="text/javascript"></script>
+
