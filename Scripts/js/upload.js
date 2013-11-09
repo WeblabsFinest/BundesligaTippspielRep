@@ -1,3 +1,5 @@
+var x,y,w,h;
+
 function handleFiles(files) {
  
     var i = 0;
@@ -40,7 +42,13 @@ function handleFiles(files) {
         $('#cropPic').imgAreaSelect({
             aspectRatio: '17:20',
             maxHeight: 176,
-            maxWidth: 150
+            maxWidth: 150,
+            onSelectEnd: function (img, selection) {
+                x = selection.x2;
+                y = selection.y2;
+                w = selection.width;
+                h = selection.height;
+            }
         }); 
     });
 }
@@ -86,13 +94,16 @@ function FileUpload(img, file) {
  
     var fd = new FormData;
     fd.append("File", file);
- 
+    fd.append("x", x);
+    fd.append("y", y);
+    fd.append("w", w);
+    fd.append("h", h);
  
     xhr.open("POST", "../../Scripts/php/upload.php", true);
     xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
  
-    xhr.send(fd);
- 
+    var message = xhr.send(fd);
+    console.log(message);
    
  
 }
