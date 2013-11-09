@@ -97,8 +97,11 @@
             </script>";
         }
     }
-    $profile = UserController::getProfile($_SESSION['user']['username']);
-    
+    if(isset($_GET['user'])){
+        $profile = UserController::getProfile($_GET['user']);
+    }else{
+        $profile = UserController::getProfile($_SESSION['user']['username']);
+    }
     
 ?>
 <div class="dialog" id="changePasswordDiv">
@@ -137,8 +140,8 @@
     <h2>Dein Account konnte leider nicht gelöscht werden, bitte kontaktiere unsern Administrator unter admin@theweblab.de</h2>
 </div>
 <div id="myAccount">
-    <h2>&Uuml;ber mich <?php if($profile->username == $_SESSION['user']['username']){?>
-        <button type="button" onclick="edit()" ><img src="/BuLiTippspiel/Media/Images/Icons/shape_square_edit.png" /> bearbeiten</button>
+    <h2>&Uuml;ber <?php echo $profile->username; if($profile->username == $_SESSION['user']['username']){?>
+        <button type="button" onclick="edit()" >bearbeiten</button>
         <?php } ?></h2>
     Name: <?php echo $profile->surname." "; echo $profile->name; ?><br/>
     Wohnort: <?php echo $profile->home; ?><br/>

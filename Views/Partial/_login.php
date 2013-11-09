@@ -16,9 +16,15 @@
 <div id="login">
     <?php if(isset($_SESSION['user'])){?>
         <h2>Mein Account</h2>
-        <img src="<?php echo HOME_HTML."Media/Images/profilbild-platzhalter.jpg"?>" height="150" />
-        Hallo, <?php echo $_SESSION['user']['username'] ?>
-        <a href="<?php echo HOME_HTML."Scripts/php/logout.php"?>">Logout</a>
+        <img id="profileImage" src="<?php echo HOME_HTML."Media/Images/profilbild-platzhalter.jpg"?>" height="150" />
+        <div id="loginMessage">
+            <h3>Hallo, <span class="fec"><?php echo $_SESSION['user']['username'] ?></span>!</h3>
+            <ul class="fec">
+                <li>><a href="<?php echo HOME_HTML."Views/Page/account.php"?>">Profil anzeigen</a></li>
+                <li>><a href="<?php echo HOME_HTML."Scripts/php/logout.php"?>">Logout</a></li>
+            </ul>
+        </div>
+        
     <?php }else{ ?>
         <h2>Einloggen</h2>
         <div>

@@ -122,7 +122,7 @@
                             <div id="process4"></div>
                         </div><br/><br/>
                         <h3><img src="../../Media/Images/KopfIcon.png" height="25"/>  Mein Profil</h3>
-                        <div id="profileImage">
+                        <div id="regProfileImage">
                             <div class="clear">
                                 <div class="left"><img src="../../Media/Images/profilbild-platzhalter.jpg" hspace="10" /></div>
                                 <div>
