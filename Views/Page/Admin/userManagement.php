@@ -18,6 +18,10 @@
                 
             </div>
         </div>
+        <!-- Navigation Active Link Script -->
+        <script>
+    			var activeLink = "#navUserManagement";
+        </script>
     </body>
 </html>
 
