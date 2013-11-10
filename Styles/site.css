@@ -32,7 +32,7 @@ body {
 
 #contentAdmin{
 	float: left;
-    width: 910px;
+    width: 860px;
     height: 700px;
     padding: 10px;
 }
@@ -224,6 +224,11 @@ h3{
     height: 250px;
     padding-top: 10px;
     background-image: url(../Media/Images/ImageContainer.png);
+}
+
+#cropImage img{
+    max-height: 300px;
+    max-width: 400px;
 }
 
 #register2, #register3, #register4{

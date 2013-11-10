@@ -21,8 +21,7 @@
 		$home = null;
         $sex = null;
         $favoriteTeam = $_POST['favoriteTeam'];
-        //TODO
-        $picturePath = null;
+        $picturePath = $_POST['picturePath'];
         $notification = htmlspecialchars($_POST['notification']);
         //TODO
         $forecastTable = null;

@@ -1,4 +1,5 @@
 var x,y,w,h;
+var ias;
 
 function handleFiles(files) {
  
@@ -12,7 +13,6 @@ function handleFiles(files) {
     for(i = 0; i < fileList.length; i++)
     {
         var img = document.createElement("img");    
-        img.height = 300;
         img.file = fileList[i];
         img.name = 'pic_'+ i;
         img.id = "cropPic";
@@ -39,13 +39,12 @@ function handleFiles(files) {
     });
     
     $(document).ready(function(){
-        $('#cropPic').imgAreaSelect({
+        ias = $('#cropPic').imgAreaSelect({
             aspectRatio: '17:20',
-            maxHeight: 176,
-            maxWidth: 150,
+            instance: true,
             onSelectEnd: function (img, selection) {
-                x = selection.x2;
-                y = selection.y2;
+                x = selection.x1;
+                y = selection.y1;
                 w = selection.width;
                 h = selection.height;
             }
@@ -103,7 +102,23 @@ function FileUpload(img, file) {
     xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
  
     var message = xhr.send(fd);
-    console.log(message);
+
+    xhr.onreadystatechange=function()
+      {
+      if (xhr.readyState==4 && xhr.status==200)
+        {
+            if(xhr.responseText == "error"){
+                //TODO Fehlerausgabe
+            }else{
+                document.getElementById("profileImagePlaceholder").src="../../Media/Upload/" + xhr.responseText;
+                $.modal.close();
+                ias.cancelSelection();
+                ias.update();
+                document.getElementById("profileImagePath").value = "../../Media/Upload/" + xhr.responseText;
+            }
+        }
+      };
+
    
  
 }

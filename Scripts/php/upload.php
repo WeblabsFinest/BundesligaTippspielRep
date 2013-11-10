@@ -46,32 +46,44 @@
     if(empty($err)) {  
     
     $dir = "../../Media/Upload/Temp/";  // Das Verzeichnis in welches die Bilder gespeichert werden sollen
-    echo $dir;
     $ziel = $dir.$name; 
     
     
     move_uploaded_file  ( $tempname  , $ziel ); 
+    }else{
+        echo "error";
+    }
     
-    $content .= "Upload erfolgreich"; 
-    
-    } 
-    
-    echo $content; 
     
     //Zuschneiden des Bildes
     $src = $ziel;
     $targ_w = 150;
     $targ_h = 176;
     $jpeg_quality = 90;
-    echo "funktioniers?".$src;
 
     $img_r = imagecreatefromjpeg($src);
+    list($width, $height, $type, $attr) = getimagesize($src);
+    $ratio = 1;
+    if($width > 400){
+        $ratio = $width/400;
+        
+    }
+    
+    
+    $w = round($ratio * $_POST['w']);
+    $h = round($ratio * $_POST['h']);
+    $x = round($ratio * $_POST['x']);
+    $y = round($ratio * $_POST['y']);
+    
     $dst_r = ImageCreateTrueColor( $targ_w, $targ_h );
 
-    imagecopyresampled($dst_r,$img_r,0,0,$_POST['x'],$_POST['y'],
-        $targ_w,$targ_h,$_POST['w'],$_POST['h']);
+    imagecopyresampled($dst_r,$img_r,0,0,$x,$y,
+        $targ_w,$targ_h,$w,$h);
+
+    $new = "../../Media/Upload/".$name;
 
     //Speichern des neuen Bildes
-    imagejpeg($dst_r, "../../Media/Upload/new".$name, $jpeg_quality);
+    imagejpeg($dst_r, $new, $jpeg_quality);
+    echo $name;
     
 ?>
