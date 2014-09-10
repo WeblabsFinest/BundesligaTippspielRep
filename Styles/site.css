@@ -32,9 +32,9 @@ body {
 
 #contentAdmin{
 	float: left;
-    width: 910px;
+    width: 860px;
     height: 700px;
-    padding: 10px;
+    padding: 20px 10px;
 }
 
 
@@ -314,7 +314,7 @@ select{
 
 /*Admin User Verwaltung */
 #userAdministration{
-	width: 900px;
+	width: 850px;
 }
 
 
@@ -368,13 +368,17 @@ select{
 
 #userAdministration td, th .normalTableCell{
 	width: 100px;
+	border-right-style:hidden;
 }
 #pagerUser{
 	height: 100%;
 	font-size: 12pt;
 	color: #fec911;
 }
-
+/** Partial Unlock**/
+#unlockUser{
+	margin-top: 20px;
+}
 .adminIconButton{
 	background-color: black;
 	margin: 1px;

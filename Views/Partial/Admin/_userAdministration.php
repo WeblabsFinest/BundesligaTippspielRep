@@ -23,16 +23,16 @@
 			url: "http://localhost/BuLiTippspiel/Controllers/UserController.php?getUsersJson",
 			datatype: "json",
 			mType: "GET",
-			width: 900,
+			width: 860,
 			rowheight: 30,
 			height: "auto",
 			colNames: ["E-Mail", "Benutzername", "Rolle", "Aktiv", "Verwaltung"],
 			colModel: [
-				{ name: "email", width: 247, search:true, stype:'text'},
-				{ name: "username", width: 238, search:true, stype:'text'},
-				{ name: "role", width: 100, search:true, stype:'text'},
-				{ name: "active", width: 50, search:true, stype:'text'},
-				{ name: "controll", width: 140, search: false,
+				{ name: "email", width: 247, search:true, stype:'text', align:'center'},
+				{ name: "username", width: 198, search:true, stype:'text', align:'center'},
+				{ name: "role", width: 89, search:true, stype:'text', align:'center'},
+				{ name: "active", width: 50, search:true, stype:'text', align:'center'},
+				{ name: "controll", width: 134, search: false,
 					formatter: function(rowId, value, rowObject, colModel, arrData) { return rowId}}
 			],
 			rowNum: 10,
@@ -44,7 +44,7 @@
 			autoencode: true,
 			loadonce: true,
 			sortable: true,
-			ignoreCase: true
+			ignoreCase: true,
 		});
 		   jQuery("#userGrid").jqGrid('navGrid', '#pagerUser', { add: false, edit: false, del: false },{}, {}, {},
                 { multipleSearch: true, overlay: false });
