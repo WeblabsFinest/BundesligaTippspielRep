@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>User Verwaltung</title>
         <?php include "../../../Scripts/php/header.php" ?>
-        <?php include "../../../Scripts/php/checkUserLoggedIn.php" ?>
+        <?php include "../../../Scripts/php/checkAdminLoggedIn.php" ?>
     </head>
     <body>
     	<?php include HOME_PHP."Views/Partial/_navigation.php" ?>
