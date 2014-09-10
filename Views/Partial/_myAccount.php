@@ -175,6 +175,7 @@
                                                                                             }
                                                                                             }
         )">Passwort &auml;ndern</button>
+        <?php if($_SESSION['user']['role'] != "Admin"){ ?>
         <button type="button" name="deleteAccount" onclick="$('#confirmUserDelete').modal({
                                                                                             overlayClose: true, 
                                                                                             escClose: true,
@@ -185,6 +186,7 @@
                                                                                             }
                                                                                             }
         )">Account l&ouml;schen</button>
+        <?php } ?>
     </form>
 </div>
 <?php } ?>
